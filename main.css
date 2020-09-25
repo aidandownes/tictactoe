@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    height: 100vw;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+      align-items:  center;
+    }
+
+    .container {
+        width: 500px;
+        height: 500px;
+    }
+
+    .controls {
+        width: 500px;
+    }
+  }
+
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    cursor: pointer;
+
+    border: 1px solid black;
+}
+
+.cell:hover {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.cell[data-player='x'] {
+    color: red;
+}
+
+.cell[data-player='o'] {
+    color: blue
+}
+
+.controls button {
+    margin-left: 10px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+    margin: 0 15px;
+}
+
+#message {
+    font-size: large;
+}
+
+#message[data-player='x'] {
+    color: red;
+}
+
+#message[data-player='o'] {
+    color: blue
+}
+
+.app-button {
+	box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+	background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+	background-color:#637aad;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+.app-button:hover {
+	background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+	background-color:#5972a7;
+}
+.app-button:active {
+	position:relative;
+	top:1px;
+}
+
+       
